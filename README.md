@@ -1,1 +1,1 @@
-# Data Structures and Algorithms - Self Paced
+# Data Structures and Algorithms - Self Paced [GFG]
