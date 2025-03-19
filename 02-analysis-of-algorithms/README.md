@@ -430,3 +430,13 @@ T(1) = theta(1) when n = 1
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/aac1000f-8675-4cde-ad87-a51ce8ccac5d" />
 
+# 2.13 : More Example Recurrences
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYzNA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/5d1e0b6c-cc33-4a55-99ce-2565fad8a189" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/7c7ef608-c4ec-4042-99ec-e372154c3c4c" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/ebd84ccb-ec2e-42c5-95f9-f3bcf8a8ab4d" />
+
