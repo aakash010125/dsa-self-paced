@@ -52,6 +52,8 @@ int sumOfFirstNNaturalNumbers3(int N) {
 
 # 2.3 : Order of Growth
 
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY3Ng%3D%3D
+
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/e2ac419d-8c8b-4ee3-8745-08dfbba283a4" />
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/e08da53a-0eff-49f5-82b4-d0ecf5f9b8b4" />
@@ -61,6 +63,8 @@ int sumOfFirstNNaturalNumbers3(int N) {
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/2d5b5bb7-5e90-4a48-a34a-df89520d8a31" />
 
 # 2.4 : Best, Average and Worst cases
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY3OA%3D%3D
 
 **Example 1:** Simple function with same Order of Growth for every Input
 
@@ -111,3 +115,35 @@ int main() {
     return 0;
 }
 ```
+
+# 2.5 : Asymptotic Notation
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY3Nw%3D%3D
+
+```
+Big O : Exact or Upper Bound
+Theta : Exact
+Omega : Exact or Lower Bound
+```
+
+```
+// Time Complexity: O(n)
+
+#include <iostream>
+
+int linearSearch(int arr[], int n, int target) {
+    for (int i=0; i<n; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6};
+    std::cout << linearSearch(arr, 6, 5);
+    return 0;
+}
+```
+
