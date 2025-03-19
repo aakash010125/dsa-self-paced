@@ -147,3 +147,52 @@ int main() {
 }
 ```
 
+# 2.6 : Big O Notation
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY4MQ%3D%3D
+
+**Direct way to Find Big O of any expression :**
+
+1. Ignore lower order terms.
+2. Ignore leading terms constant.
+
+```
+3N^2 + 5N + 6 --> O(N^2)
+
+3N + 10NlogN + 3 --> O(NlogN)
+
+10N^3 + 40N + 10 --> O(N^3)
+```
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/111b3679-ee3a-49b7-97d9-74a5d7b4131c" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/15b385e3-d46c-4f55-844d-20f154f9102e" />
+
+## Applications
+
+Used when we have an upper bound.
+
+```
+// Time Complexity: O(sqrt(n))
+
+#include <iostream>
+
+bool isPrime(int n) {
+    if (n == 1) return false;
+    if (n == 2 || n == 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (int i=5; i*i<=n; i+=6) {
+        if (n % i == 0 || n % (i+2) == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int n1 = 45, n2 = 100, n3 = 17;
+    std::cout << isPrime(n1) << " " << isPrime(n2) << " " << isPrime(n3);
+    return 0;
+}
+```
+
