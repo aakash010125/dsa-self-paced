@@ -196,3 +196,11 @@ int main() {
 }
 ```
 
+# 2.7 : Omega Notation
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY4NQ%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/ea9cac6c-d384-4f27-adbc-00dc5f6e0186" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/af454c69-4106-4666-8ae0-2ed29c7c7515" />
+
