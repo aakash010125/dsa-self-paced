@@ -278,3 +278,86 @@ for (int i=2; i<n; i=pow(i, c)) {
 
 <img width="325" alt="Image" src="https://github.com/user-attachments/assets/6600b733-a680-42c2-8254-bfe3828f6bcd" />
 
+# 2.10 : Analysis of multiple loops
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY4MA%3D%3D
+
+**Example 1:** Subsequent Loops
+
+```
+void function(int n) {
+    // TC1: theta(n)
+    for (int i=0; i<n; i++) {
+        Some theta(1) Constant Work
+    }
+    // TC2: theta(logn)
+    for (int i=1; i<n; i=i*2) {
+        Some theta(1) Constant Work
+    }
+    // TC3: theta(1)
+    for (int i=1; i<100; i++) {
+        Some theta(1) Constant Work
+    }
+}
+
+Total Time Complexity = TC1 + TC2 + TC3 = theta(n) + theta(logn) + theta(1) = theta(n)
+```
+
+**Example 2:** Nested Loops
+
+```
+void function(int n) {
+    // Outer Loop (TC1): theta(n)
+    for (int i=0; i<n; i++) {
+        // Inner Loop (TC2): theta(logn)
+        for (int j=1; j<n; j=j*2) {
+            // Some theta(1) Constant Work
+        }
+    }
+}
+
+Total Time Complexity = TC1 * TC2 = theta(n) * theta(logn) = theta(nlogn)
+```
+
+**Example 3:** Mixed Loops
+
+```
+void function(int n) {
+    // TC1: theta(nlogn)
+    for (int i=0; i<n; i++) {
+        for (int j=1; j<n; j=j*2) {
+            // Some theta(1) Constant Work
+        }
+    }
+    // TC1: theta(n^2)
+    for (int i=0; i<n; i++) {
+        for (int j=1; j<n; j++) {
+            // Some theta(1) Constant Work
+        }
+    }
+}
+
+Total Time Complexity = TC1 + TC2 = theta(nlogn) + theta(n^2) = theta(n^2)
+```
+
+**Example 4:** Mixed Loops with different Inputs
+
+```
+void function(int n) {
+    // TC1: theta(nlogn)
+    for (int i=0; i<n; i++) {
+        for (int j=1; j<n; j=j*2) {
+            // Some theta(1) Constant Work
+        }
+    }
+    // TC1: theta(m^2)
+    for (int i=0; i<m; i++) {
+        for (int j=1; j<m; j++) {
+            // Some theta(1) Constant Work
+        }
+    }
+}
+
+Total Time Complexity = TC1 + TC2 = theta(nlogn) + theta(m^2) = theta(nlogn + m^2)
+```
+
