@@ -204,3 +204,13 @@ int main() {
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/af454c69-4106-4666-8ae0-2ed29c7c7515" />
 
+# 2.8 : Theta Notation
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MTU0MjU%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/f819dc77-d5d6-438c-bb07-0dd7388bcb9b" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/5af002bb-a6e9-48b9-ade0-d8c56ca62e1f" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/3f2fc4b5-257d-4da4-918a-ab4c8263e23b" />
+
