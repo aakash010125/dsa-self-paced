@@ -251,7 +251,7 @@ for (int i=1; i<n; i*=c) {
 // Time Complexity: theta(logn with base c)
 ```
 
-<img width="325" alt="Image" src="https://github.com/user-attachments/assets/51a02fdc-10a4-4938-95ca-71595462da1b" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/51a02fdc-10a4-4938-95ca-71595462da1b" />
 
 **Example 4:** n - User Input, c - Constant
 
@@ -264,7 +264,7 @@ for (int i=n; i>1; i/=c) {
 // Time Complexity: theta(logn with base c)
 ```
 
-<img width="325" alt="Image" src="https://github.com/user-attachments/assets/ba70bcfd-7e5d-477c-b5ac-f6c09ca99203" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/ba70bcfd-7e5d-477c-b5ac-f6c09ca99203" />
 
 **Example 5:** n - User Input, c - Constant
 
@@ -276,7 +276,7 @@ for (int i=2; i<n; i=pow(i, c)) {
 // Time Complexity: theta(loglogn)
 ```
 
-<img width="325" alt="Image" src="https://github.com/user-attachments/assets/6600b733-a680-42c2-8254-bfe3828f6bcd" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/6600b733-a680-42c2-8254-bfe3828f6bcd" />
 
 # 2.10 : Analysis of multiple loops
 
@@ -361,7 +361,7 @@ void function(int n) {
 Total Time Complexity = TC1 + TC2 = theta(nlogn) + theta(m^2) = theta(nlogn + m^2)
 ```
 
-# 2.10 : Analysis of Recursion (Introduction)
+# 2.11 : Analysis of Recursion (Introduction)
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYyNQ%3D%3D
 
@@ -423,4 +423,10 @@ T(n) = T(n-1) + theta(1)
 For n <= 1 (i.e., base condition):
 T(1) = theta(1) when n = 1
 ```
+
+# 2.12 : Recursion Tree Method for Solving Recurrences
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYzNQ%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/aac1000f-8675-4cde-ad87-a51ce8ccac5d" />
 
