@@ -440,3 +440,12 @@ T(1) = theta(1) when n = 1
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/ebd84ccb-ec2e-42c5-95f9-f3bcf8a8ab4d" />
 
+# 2.14 : Upper Bounds Using Recursion Tree Method
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYzNg%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/bde3c225-ac7d-4a09-ac55-88c3ae9877d7" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/7f2eab99-abd6-4625-bc37-f1512b95f30c" />
+
+
