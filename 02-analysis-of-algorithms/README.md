@@ -214,3 +214,67 @@ int main() {
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/3f2fc4b5-257d-4da4-918a-ab4c8263e23b" />
 
+# 2.9 : Analysis of Common loops
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MTY1MDg%3D
+
+**Example 1:** n - User Input, c - Constant
+
+```
+for (int i=0; i<n; i+=c) {
+    // some theta(1) work
+}
+
+// Loop runs ceil(n/c) times
+// Time Complexity: theta(n)
+```
+
+**Example 2:** n - User Input, c - Constant
+
+```
+for (int i=n; i>0; i-=c) {
+    // some theta(1) work
+}
+
+// Loop runs ceil(n/c) times
+// Time Complexity: theta(n)
+```
+
+**Example 3:** n - User Input, c - Constant
+
+```
+for (int i=1; i<n; i*=c) {
+    // some theta(1) work
+}
+
+// Loop runs ceil(logn with base c) times
+// Time Complexity: theta(logn with base c)
+```
+
+<img width="325" alt="Image" src="https://github.com/user-attachments/assets/51a02fdc-10a4-4938-95ca-71595462da1b" />
+
+**Example 4:** n - User Input, c - Constant
+
+```
+for (int i=n; i>1; i/=c) {
+    // some theta(1) work
+}
+
+// Loop runs floor(logn with base c) times
+// Time Complexity: theta(logn with base c)
+```
+
+<img width="325" alt="Image" src="https://github.com/user-attachments/assets/ba70bcfd-7e5d-477c-b5ac-f6c09ca99203" />
+
+**Example 5:** n - User Input, c - Constant
+
+```
+for (int i=2; i<n; i=pow(i, c)) {
+    // some theta(1) work
+}
+
+// Time Complexity: theta(loglogn)
+```
+
+<img width="325" alt="Image" src="https://github.com/user-attachments/assets/6600b733-a680-42c2-8254-bfe3828f6bcd" />
+
