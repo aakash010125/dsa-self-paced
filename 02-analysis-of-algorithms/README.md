@@ -361,3 +361,66 @@ void function(int n) {
 Total Time Complexity = TC1 + TC2 = theta(nlogn) + theta(m^2) = theta(nlogn + m^2)
 ```
 
+# 2.10 : Analysis of Recursion (Introduction)
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYyNQ%3D%3D
+
+**Example 1:** 
+
+```
+void function(int n) {
+    if (n <= 0) return;
+    print("GFG");
+    function(n/2);
+    function(n/2);
+}
+
+// Recurrence Relation:
+
+For n > 0:
+T(n) = T(n/2) + T(n/2) + theta(1)
+T(n) = 2T(n/2) + theta(1)
+
+For n <= 0 (i.e., base condition):
+T(0) = theta(1)
+```
+
+**Example 2:**
+
+```
+void function(int n) {
+    if (n <= 0) return;
+    for (int i=0; i<n; i++) {
+        print("GFG");
+    }
+    function(n/2);
+    function(n/3);
+}
+
+// Recurrence Relation:
+
+For n > 0:
+T(n) = theta(n) + T(n/2) + T(n/3) + theta(1)
+
+For n <= 0 (i.e., base condition):
+T(0) = theta(1) when n = 0
+```
+
+**Example 3:**
+
+```
+void function(int n) {
+    if (n <= 1) return;
+    print("GFG");
+    function(n-1);
+}
+
+// Recurrence Relation:
+
+For n > 1:
+T(n) = T(n-1) + theta(1)
+
+For n <= 1 (i.e., base condition):
+T(1) = theta(1) when n = 1
+```
+
