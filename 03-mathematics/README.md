@@ -119,3 +119,59 @@ int factorial(int n) {
 // Time Complexity : O(n)
 // Auxiliary space : O(n)
 ```
+
+# 3.4 : Trailing Zeros in Factorial
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg0MQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAwMQ%3D%3D
+
+```
+Problem Statement: 
+
+We are given a number. The task is to find the Number of Trailing Zeros in the factorial of the number.
+The Trailing Zeros are the Zeros, which appear at the end of a number(factorial in that case)
+
+I/P: 5
+O/P: 1
+
+I/P: 10
+O/P: 2
+
+I/P: 100
+O/P: 24
+
+Naive Method:
+// Overflow issue with this solution
+
+int countZeros(int n) {
+    int factorial = 1, count = 0;
+    for (int i=2; i<=n; i++) {
+        factorial *= i;
+    }
+    
+    while ((factorial % 10) == 0) {
+        count++;
+        factorial /= 10;
+    }
+    return count;
+}
+
+// Time Complexity: O(n)
+// Auxiliary Space: O(1) or constant
+
+Efficient Solution:
+// Trailing zero count = floor(n/5) + floor(n/25) + floor(n/125) + ....
+
+int countTrailingZeros(int n) {
+    int count = 0;
+    for (int i=5; i<=n; i*=5) {
+        count += floor(n/i);
+    }
+    return count;
+}
+
+// Time Complexity: O(log(n))
+// Auxiliary Space: O(1) or constant
+```
+
