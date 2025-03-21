@@ -18,7 +18,7 @@ O/P: 2
 I/P: 7
 O/P: 1
 
-Solution:
+1. Solution:
 
 int countDigits(int n) {
     int countOfDigits = 0;
@@ -60,7 +60,7 @@ O/P: false
 I/P: 367
 O/P: false
 
-Solution:
+2. Solution:
 
 bool isPalindrome(int n) {
     int reversedNumber = 0, temp = n;
@@ -96,7 +96,7 @@ O/P: 720
 I/P: 0
 O/P: 1
 
-Iterative Solution:
+1. Iterative Solution:
 
 int factorial(int n) {
     int result = 1;
@@ -109,7 +109,7 @@ int factorial(int n) {
 // Time Complexity : O(n)
 // Auxiliary space : O(1) or constant
 
-Recursive Solution:
+2. Recursive Solution:
 
 int factorial(int n) {
     if (n == 0) return 1;
@@ -141,7 +141,7 @@ O/P: 2
 I/P: 100
 O/P: 24
 
-Naive Method:
+1. Naive Method:
 // Overflow issue with this solution
 
 int countZeros(int n) {
@@ -160,7 +160,7 @@ int countZeros(int n) {
 // Time Complexity: O(n)
 // Auxiliary Space: O(1) or constant
 
-Efficient Solution:
+2. Efficient Solution:
 // Trailing zero count = floor(n/5) + floor(n/25) + floor(n/125) + ....
 
 int countTrailingZeros(int n) {
@@ -197,7 +197,7 @@ O/P: 100
 I/P: a = 7, b = 3
 O/P: 1
 
-Naive Method:
+1. Naive Method:
 
 int gcd(int a, int b) {
     int result = min(a,b);
@@ -213,7 +213,7 @@ int gcd(int a, int b) {
 // Time Complexity: O(min(a,b))
 // Auxiliary Space: O(1) or constant
 
-Euclidean Approach:
+2. Euclidean Approach:
 // The idea of this algorithm is, the GCD of two numbers doesn’t change if the smaller number is subtracted from the bigger number. 
 // This is the Euclidean algorithm by subtraction. It is a process of repeat subtraction, carrying the result forward each time until the result is equal to any one number being subtracted.
 
@@ -231,7 +231,7 @@ int gcd(int a, int b) {
 // Time Complexity: O(min(a,b))
 // Auxiliary Space: O(1) or constant
 
-Optimised Euclidean Approach:
+3. Optimised Euclidean Approach:
 // In this approach, instead of repeatedly subtracting the numbers till both become equal, we can check if one number is a factor of the other.
 
 int gcd(int a, int b) {
@@ -269,7 +269,7 @@ O/P: 8
 I/P: a = 3, b = 7
 O/P: 21
 
-Naive Method:
+1. Naive Method:
 
 int lcm(int a, int b) {
     int result = max(a,b);
@@ -285,11 +285,10 @@ int lcm(int a, int b) {
 // Time Complexity: O(a*b - max(a,b))
 // Auxiliary Space: O(1)
 
-Efficient Approach:
-An efficient solution is based on the below formula for LCM of two numbers ‘a’ and ‘b’. 
-
-a x b = LCM(a, b) * GCD (a, b)
-LCM(a, b) = (a x b) / GCD(a, b)
+2. Efficient Approach:
+// An efficient solution is based on the below formula for LCM of two numbers ‘a’ and ‘b’. 
+// a x b = LCM(a, b) * GCD (a, b)
+// LCM(a, b) = (a x b) / GCD(a, b)
 
 int gcd(int a, int b) {
     if (b == 0)
@@ -303,6 +302,78 @@ int lcm(int a, int b) {
 }
 
 // Time Complexity: O(log(min(a,b))
+// Auxiliary Space: O(1)
+```
+
+# 3.7 : Check for Prime
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg0NQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAyMw%3D%3D
+
+```
+Problem Statement: 
+
+We are given a number. The task is to check if the number is prime or not.
+Prime Number: A prime is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
+I/P: 13
+O/P: Yes
+
+I/P: 14
+O/P: No
+
+I/P: 101
+O/P: Yes
+
+1. Naive Method: 
+// Iterate from 2 to  (n-1) and check if any number in this range divides n. If the number divides n, then it is not a prime number.
+
+bool isPrime(int n) {
+    if (n == 1) return false;
+    for (int i=2; i<n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Time Complexity: O(n)
+// Auxiliary Space: O(1)
+
+2. Efficient Approach: 
+// Iterate through all numbers from 2 to square root of n and for every number check if it divides n [because if a number is expressed as n = xy and 
+// any of the x or y is greater than the root of n, the other must be less than the root value]. If we find any number that divides, we return false.
+
+bool isPrime(int n) {
+    if (n == 1) return false;
+    for (int i=2; i*i<=n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Time Complexity: O(sqrt(n))
+// Auxiliary Space: O(1)
+
+3. More Efficient Approach: [for large value of n]
+
+bool isPrime(int n) {
+    if (n == 1) return false;
+    if (n == 2 || n == 3) return true;
+    if ((n % 2 == 0) || (n % 3 == 0)) return false;
+    for (int i=5; i*i<=n; i+=6) {
+        if ((n % i == 0) and (n % (i+2) == 0)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Time Complexity: O(sqrt(n)) - approx 3 times faster than Approach 2
 // Auxiliary Space: O(1)
 ```
 
