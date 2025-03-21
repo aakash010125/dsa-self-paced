@@ -175,3 +175,73 @@ int countTrailingZeros(int n) {
 // Auxiliary Space: O(1) or constant
 ```
 
+# 3.5 : GCD or HCF of two Numbers
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTgzOQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAwMg%3D%3D
+
+```
+Problem Statement: 
+
+We are given two numbers. The task is to find the GCD / HCF of the numbers.
+GCD: Greatest Common Divisor
+HCF: Highest Common Factor
+
+I/P: a = 4, b = 2
+O/P: 2
+
+I/P: a = 100, b = 200
+O/P: 100
+
+I/P: a = 7, b = 3
+O/P: 1
+
+Naive Method:
+
+int gcd(int a, int b) {
+    int result = min(a,b);
+    while (result > 0) {
+        if ((a % result == 0) and (b % result == 0)) {
+            break;
+        }
+        result--;
+    }
+    return result;
+}
+
+// Time Complexity: O(min(a,b))
+// Auxiliary Space: O(1) or constant
+
+Euclidean Approach:
+// The idea of this algorithm is, the GCD of two numbers doesn’t change if the smaller number is subtracted from the bigger number. 
+// This is the Euclidean algorithm by subtraction. It is a process of repeat subtraction, carrying the result forward each time until the result is equal to any one number being subtracted.
+
+int gcd(int a, int b) {
+    while (a != b) {
+        if (a > b) {
+            a = a - b;
+        } else {
+            a = b - a;
+        }
+    }
+    return a;
+}
+
+// Time Complexity: O(min(a,b))
+// Auxiliary Space: O(1) or constant
+
+Optimised Euclidean Approach:
+// In this approach, instead of repeatedly subtracting the numbers till both become equal, we can check if one number is a factor of the other.
+
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b);
+}
+
+// Time Complexity: O(log(min(a,b))
+// Auxiliary Space: O(1) or constant
+```
+
