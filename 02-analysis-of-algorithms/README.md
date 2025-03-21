@@ -2,6 +2,8 @@
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY3Mw%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NjcwNw%3D%3D
+
 **Example Problem :** Sum of first N natural numbers. <br>
 
 Input : 3 <br> 
@@ -44,6 +46,8 @@ int sumOfFirstNNaturalNumbers3(int N) {
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/NjY3MA%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/Njg4NQ%3D%3D
+
 1. The idea is to measure order of growth of function in terms of input size.
 2. Doesn't depend upon the machine, programming language, testcases, etc.
 3. No need to implement, we can analyze algorithms.
@@ -65,6 +69,8 @@ int sumOfFirstNNaturalNumbers3(int N) {
 # 2.4 : Best, Average and Worst cases
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY3OA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NjA4Ng%3D%3D
 
 **Example 1:** Simple function with same Order of Growth for every Input
 
@@ -120,6 +126,8 @@ int main() {
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY3Nw%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/MjIyMw%3D%3D
+
 ```
 Big O : Exact or Upper Bound
 Theta : Exact
@@ -150,6 +158,8 @@ int main() {
 # 2.6 : Big O Notation
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY4MQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2NQ%3D%3D
 
 **Direct way to Find Big O of any expression :**
 
@@ -200,6 +210,8 @@ int main() {
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY4NQ%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2Ng%3D%3D
+
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/ea9cac6c-d384-4f27-adbc-00dc5f6e0186" />
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/af454c69-4106-4666-8ae0-2ed29c7c7515" />
@@ -207,6 +219,8 @@ int main() {
 # 2.8 : Theta Notation
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MTU0MjU%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2Nw%3D%3D
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/f819dc77-d5d6-438c-bb07-0dd7388bcb9b" />
 
@@ -281,6 +295,8 @@ for (int i=2; i<n; i=pow(i, c)) {
 # 2.10 : Analysis of multiple loops
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjY4MA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2OA%3D%3D
 
 **Example 1:** Subsequent Loops
 
@@ -365,6 +381,8 @@ Total Time Complexity = TC1 + TC2 = theta(nlogn) + theta(m^2) = theta(nlogn + m^
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYyNQ%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2OQ%3D%3D
+
 **Example 1:** 
 
 ```
@@ -428,6 +446,8 @@ T(1) = theta(1) when n = 1
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYzNQ%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM3MA%3D%3D
+
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/aac1000f-8675-4cde-ad87-a51ce8ccac5d" />
 
 # 2.13 : More Example Recurrences
@@ -448,4 +468,9 @@ T(1) = theta(1) when n = 1
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/7f2eab99-abd6-4625-bc37-f1512b95f30c" />
 
+# 2.15 : Space Complexity
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MTEyNg%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM3MQ%3D%3D
 
