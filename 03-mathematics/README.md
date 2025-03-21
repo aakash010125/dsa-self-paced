@@ -75,3 +75,47 @@ bool isPalindrome(int n) {
 // Auxiliary space : O(1) or constant
 ```
 
+# 3.3 : Factorial of a Number
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg1Mg%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAwMA%3D%3D
+
+```
+Problem Statement: 
+
+We are given a number. The task is to find the factorial of the number.
+The factorial (n!) of a number is the product of all the integers from 1 to that number, i.e, n! = 1*2*3*.....(n-1)*n
+
+I/P: 4
+O/P: 24
+
+I/P: 6
+O/P: 720
+
+I/P: 0
+O/P: 1
+
+Iterative Solution:
+
+int factorial(int n) {
+    int result = 1;
+    for (int i=2; i<=n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+// Time Complexity : O(n)
+// Auxiliary space : O(1) or constant
+
+Recursive Solution:
+
+int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n-1);
+}
+
+// Time Complexity : O(n)
+// Auxiliary space : O(n)
+```
