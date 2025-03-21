@@ -245,3 +245,64 @@ int gcd(int a, int b) {
 // Auxiliary Space: O(1) or constant
 ```
 
+# 3.6 : LCM of Two Numbers
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg0Nw%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAwMw%3D%3D
+
+```
+Problem Statement: 
+
+We are given two numbers. The task is to find the LCM of the numbers.
+LCM: Least Common Multiple
+
+I/P: a = 4, b = 6
+O/P: 12
+
+I/P: a = 12, b = 15
+O/P: 60
+
+I/P: a = 2, b = 8
+O/P: 8
+
+I/P: a = 3, b = 7
+O/P: 21
+
+Naive Method:
+
+int lcm(int a, int b) {
+    int result = max(a,b);
+    while (true) {
+        if ((result % a == 0) and (result % b == 0)) {
+            return result;
+        }
+        result++;
+    }
+    return result;
+}
+
+// Time Complexity: O(a*b - max(a,b))
+// Auxiliary Space: O(1)
+
+Efficient Approach:
+An efficient solution is based on the below formula for LCM of two numbers ‘a’ and ‘b’. 
+
+a x b = LCM(a, b) * GCD (a, b)
+LCM(a, b) = (a x b) / GCD(a, b)
+
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b);
+}
+
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+// Time Complexity: O(log(min(a,b))
+// Auxiliary Space: O(1)
+```
+
