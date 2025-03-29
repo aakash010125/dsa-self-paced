@@ -232,6 +232,8 @@ int main() {
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MTY1MDg%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2OA%3D%3D
+
 **Example 1:** n - User Input, c - Constant
 
 ```
