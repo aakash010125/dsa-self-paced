@@ -379,6 +379,11 @@ void function(int n) {
 Total Time Complexity = TC1 + TC2 = theta(nlogn) + theta(m^2) = theta(nlogn + m^2)
 ```
 
+### **Algorithms Cheat Sheet :**
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/fe9eedb5-8444-4774-9774-47991c0fa5c4" />
+
+
 # 2.11 : Analysis of Recursion (Introduction)
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYyNQ%3D%3D
