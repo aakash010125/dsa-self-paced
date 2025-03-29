@@ -461,6 +461,8 @@ T(1) = theta(1) when n = 1
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/video/MjYzNA%3D%3D
 
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM3MA%3D%3D
+
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/5d1e0b6c-cc33-4a55-99ce-2565fad8a189" />
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/7c7ef608-c4ec-4042-99ec-e372154c3c4c" />
