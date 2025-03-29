@@ -161,7 +161,7 @@ int main() {
 
 **Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Intro/article/NzM2NQ%3D%3D
 
-**Direct way to Find Big O of any expression :**
+**Direct way to Find Big O Notation of any expression :**
 
 1. Ignore lower order terms.
 2. Ignore leading terms constant.
