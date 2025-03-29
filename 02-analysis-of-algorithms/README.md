@@ -75,7 +75,7 @@ int sumOfFirstNNaturalNumbers3(int N) {
 **Example 1:** Simple function with same Order of Growth for every Input
 
 ```
-// Time Taken: C1(n) + C2
+// Time Taken: C1 * n + C2
 // Order of Growth: n (or Linear)
 
 #include <iostream>
