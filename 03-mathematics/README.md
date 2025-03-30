@@ -434,6 +434,7 @@ int main() {
     primeFactors(n);
     return 0;
 }
+
 // Time Complexity: O(n * sqrt(n) * log(n))
 // Auxiliary Space: O(1)
 
@@ -483,6 +484,88 @@ void primeFactors(int n) {
 }
 
 // Time Complexity: O(sqrt(n)) - approx 3 times faster than Approach 2
+// Auxiliary Space: O(1)
+```
+
+# 3.9 : All Divisors of a Number
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTkwMg%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAyNQ%3D%3D
+
+```
+Problem Statement: 
+
+We are given a number n. The task is to print all the divisors of n. 
+Divisor: A divisor is a number that completely divides a number.
+
+I/P: 15
+O/P: 1 3 5 15
+
+I/P: 100
+O/P: 1 2 4 5 10 20 25 50 100
+
+I/P: 7
+O/P: 1 7
+
+1. Naive Method: 
+// A Naive Solution would be to iterate all the numbers from 1 to n, 
+// checking if that number divides n and printing it. 
+
+void printDivisors(int n) {
+    for (int i=1; i<=n; i++) {
+        if (n % i == 0) {
+            std::cout << i << " ";
+        }
+    }
+}
+
+// Time Complexity: O(n)
+// Auxiliary Space: O(1)
+
+2. Efficient Approach: [Not in sorted Order]
+// If we look carefully, all the divisors are present in pairs.
+// For example if n = 100, then the various pairs of divisors are: (1,100), (2,50), (4,25), (5,20), (10,10)
+// Using this fact we could speed up our program significantly. We, however, 
+// have to be careful if there are two equal divisors as in the case of (10, 10). In such case, we’d print only one of them. 
+// We iterate through all numbers from 1 to square root of n in this case.
+
+void printDivisors(int n) {
+    for (int i=1; i*i<=n; i++) {
+        if (n % i == 0) {
+            std::cout << i << " ";
+            if (i != (n/i)) {
+                std::cout << (n/i) << " ";
+            }
+        }
+    }
+}
+
+// Time Complexity: O(sqrt(n))
+// Auxiliary Space: O(1)
+
+3. More Efficient Approach:
+// We want to print the divisors in sorted order.
+// The idea is to 1st print all divisors from 1 (inclusive) to square root n (exclusive)
+// Then, print all divisors from square root n (inclusive) to n (inclusive)
+
+void printDivisors(int n) {
+    int i;
+    // print all divisors from 1 (inclusive) to sqrt(n) (exclusive)
+    for (i=1; i*i<=n; i++) {
+        if (n % i == 0) {
+            std::cout << i << " ";
+        }
+    }
+    // print all divisors from sqrt(n) (inclusive) to n (inclusive)
+    for (; i*i>=1; i--) {
+        if (n % i == 0) {
+            std::cout << (n/i) << " ";
+        }
+    }
+}
+
+// Time Complexity: O(sqrt(n))
 // Auxiliary Space: O(1)
 ```
 
