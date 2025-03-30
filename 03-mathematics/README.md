@@ -377,3 +377,112 @@ bool isPrime(int n) {
 // Auxiliary Space: O(1)
 ```
 
+# 3.7 : Prime Factors
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg0OQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAyNA%3D%3D
+
+```
+Problem Statement: 
+
+We are given a number n. The task is to print all prime factors of n (provided n > 1).
+Prime Factors: They are prime numbers, which are factors of a given number.
+
+I/P: 12
+O/P: 2 2 3
+
+I/P: 13
+O/P: 13
+
+I/P: 315
+O/P: 3 3 5 7
+
+1. Naive Method: 
+// Iterate from 2 to  (n-1) and check if the number is prime. If the number is prime, 
+// then divide the given number by this number, till it remains completely divisible.
+
+#include <iostream>
+
+// TC: sqrt(n)
+bool isPrime(int n) {
+    if (n == 1) return false;
+    if (n == 2 || n == 3) return true;
+    if ((n % 2 == 0) || (n % 3 == 0)) return false;
+    for (int i=5; i*i<=n; i+=6) {
+        if ((n % i == 0) and (n % (i+2) == 0)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void primeFactors(int n) {
+    for (int i=2; i<n; i++) {
+        if(isPrime(i)) {
+            int num = i;
+            while (n % num == 0) {
+                std::cout << i << " ";
+                num *= i;
+            }
+        }
+    }
+}
+
+int main() {
+    int n = 315;
+    primeFactors(n);
+    return 0;
+}
+// Time Complexity: O(n * sqrt(n) * log(n))
+// Auxiliary Space: O(1)
+
+2. Efficient Approach: 
+// Iterate through all numbers from 2 to square root of n and for every number check 
+// if it divides n [because if a number is expressed as n = xy and any of the x or y 
+// is greater than the root of n, the other must be less than the root value]. 
+// Repetitively divide n by the number till it remains completely divisible, and print the values.
+
+void primeFactors(int n) {
+    if(n <= 1) return;
+    for (int i=2; i*i<=n; i++) {
+        while(n % i == 0) {
+            std::cout << i << " ";
+            n /= i;
+        }
+    }
+    if (n > 1) std::cout << n;
+}
+
+// Time Complexity: O(sqrt(n))
+// Auxiliary Space: O(1)
+
+3. More Efficient Approach: [for large value of n]
+
+void primeFactors(int n) {
+    if(n <= 1) return;
+    while (n % 2 == 0) {
+        std::cout << 2 << " ";
+        n /= 2;
+    }
+    while (n % 3 == 0) {
+        std::cout << 3 << " ";
+        n /= 3;
+    }
+    for (int i=5; i*i<=n; i+=6) {
+        while(n % i == 0) {
+            std::cout << i << " ";
+            n /= i;
+        }
+        while(n % (i+2) == 0) {
+            std::cout << (i+2) << " ";
+            n /= (i+2);
+        }
+    }
+    if (n>3) std::cout << n;
+}
+
+// Time Complexity: O(sqrt(n)) - approx 3 times faster than Approach 2
+// Auxiliary Space: O(1)
+```
+
