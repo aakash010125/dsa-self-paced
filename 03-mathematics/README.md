@@ -377,7 +377,7 @@ bool isPrime(int n) {
 // Auxiliary Space: O(1)
 ```
 
-# 3.7 : Prime Factors
+# 3.8 : Prime Factors
 
 **Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg0OQ%3D%3D
 
