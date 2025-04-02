@@ -569,3 +569,93 @@ void printDivisors(int n) {
 // Auxiliary Space: O(1)
 ```
 
+# 3.10 : Sieve of Eratosthenes
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg1MA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAyNg%3D%3D
+
+```
+Problem Statement: 
+
+Given a number n, print all primes smaller than or equal to n. It is also given that n is a small number.
+
+I/P: n = 10
+O/P: 2 3 5 7 
+
+I/P: n = 20 
+O/P: 2 3 5 7 11 13 17 19
+
+1. Naive Method: 
+// A Naive Solution would be to iterate all the numbers from 1 to n, 
+// checking if that number is prime or not, if it's prime print it. 
+
+#include <iostream>
+
+bool isPrime(int n) {
+    if (n <= 1) return false;
+    if (n == 2 || n == 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (int i=5; i*i<=n; i+=6) {
+        if ((n % i == 0) || (n % (i+2) == 0)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int n = 25;
+    for (int i=1; i<=n; i++) {
+        if (isPrime(i)) {
+            std::cout << i << " ";
+        }
+    }
+    return 0;
+}
+
+// Time Complexity: O(n * sqrt(n))
+// Auxiliary Space: O(1)
+
+2. Efficient Approach:
+
+void SieveOfEratosthenes(int n) {
+    vector<bool> isPrime(n+1, true);
+    
+    for (int i=2; i*i<=n; i++) {
+        if (isPrime[i]) {
+            for (int j=2*i; j<=n; j+=i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+    
+    for (int i=2; i<=n; i++) {
+        if(isPrime[i]) {
+            std::cout << i << " ";
+        }
+    }
+}
+
+// Time Complexity: O(n * log(log(n)))
+// Auxiliary Space: O(n)
+
+3. Optimised Efficient Approach:
+
+void SieveOfEratosthenes(int n) {
+    vector<bool> isPrime(n+1, true);
+    
+    for (int i=2; i<=n; i++) {
+        if (isPrime[i]) {
+            std::cout << i << " ";
+            for (int j=i*i; j<=n; j+=i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+}
+
+// Time Complexity: O(n * log(log(n)))
+// Auxiliary Space: O(n)
+```
+
