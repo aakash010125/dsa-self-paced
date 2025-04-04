@@ -659,3 +659,52 @@ void SieveOfEratosthenes(int n) {
 // Auxiliary Space: O(n)
 ```
 
+# 3.11 : Computing Power
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MTg0Ng%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAyNw%3D%3D
+
+```
+Problem Statement: 
+
+We are given two numbers. The task is to compute Power(x,n)  which means x to the power y.
+
+I/P: x = 2, n = 3
+O/P: 8  // 2*2*2
+
+I/P: x = 7, n = 2
+O/P: 49 // 7*7
+
+1. Naive Method: 
+// A Naive Solution would be to iterate all the numbers from 1 to n, 
+// and multiply number x, n times. 
+
+int power(int x, int n) {
+    if (n == 0) return 1;
+    int result = 1;
+    for(int i=1; i<=n; i++) {
+        result *= x;
+    }
+    return result;
+}
+
+// Time Complexity: O(n)
+// Auxiliary Space: O(1)
+
+2. Efficient Approach: Recursion
+// The problem can be recursively defined by:
+// power(x, n) = power(x, n / 2) * power(x, n / 2);        // if n is even
+// power(x, n) = x * power(x, n / 2) * power(x, n / 2);    // if n is odd
+
+int power(int x, int n) {
+    if (n == 0) return 1;
+    int temp = power(x, n/2);
+    temp = temp * temp;
+    if (n % 2 == 0) return temp;
+    else return temp * x;
+}
+
+// Time Complexity: Theta(logn)
+// Auxiliary Space: Theta(logn) // Since uses recursion and height of tree goes upto logn height
+```
