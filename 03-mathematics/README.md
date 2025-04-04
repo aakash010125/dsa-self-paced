@@ -509,8 +509,7 @@ I/P: 7
 O/P: 1 7
 
 1. Naive Method: 
-// A Naive Solution would be to iterate all the numbers from 1 to n, 
-// checking if that number divides n and printing it. 
+// A Naive Solution would be to iterate all the numbers from 1 to n, checking if that number divides n and printing it. 
 
 void printDivisors(int n) {
     for (int i=1; i<=n; i++) {
@@ -587,8 +586,7 @@ I/P: n = 20
 O/P: 2 3 5 7 11 13 17 19
 
 1. Naive Method: 
-// A Naive Solution would be to iterate all the numbers from 1 to n, 
-// checking if that number is prime or not, if it's prime print it. 
+// A Naive Solution would be to iterate all the numbers from 1 to n, checking if that number is prime or not, if it's prime print it. 
 
 #include <iostream>
 
@@ -637,7 +635,7 @@ void SieveOfEratosthenes(int n) {
     }
 }
 
-// Time Complexity: O(n * log(log(n)))
+// Time Complexity: O(n * loglogn)
 // Auxiliary Space: O(n)
 
 3. Optimised Efficient Approach:
@@ -655,7 +653,7 @@ void SieveOfEratosthenes(int n) {
     }
 }
 
-// Time Complexity: O(n * log(log(n)))
+// Time Complexity: O(n * loglogn)
 // Auxiliary Space: O(n)
 ```
 
@@ -677,8 +675,7 @@ I/P: x = 7, n = 2
 O/P: 49 // 7*7
 
 1. Naive Method: 
-// A Naive Solution would be to iterate all the numbers from 1 to n, 
-// and multiply number x, n times. 
+// A Naive Solution would be to iterate all the numbers from 1 to n, and multiply number x, n times. 
 
 int power(int x, int n) {
     if (n == 0) return 1;
@@ -707,4 +704,59 @@ int power(int x, int n) {
 
 // Time Complexity: Theta(logn)
 // Auxiliary Space: Theta(logn) // Since uses recursion and height of tree goes upto logn height
+```
+
+# 3.12 : Iterative Power
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/video/MjEzNw%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Mathematics/article/NzAyOA%3D%3D
+
+```
+Problem Statement: 
+
+We are given two numbers. The task is to compute Power(x,n)  which means x to the power y, using, Iterative Power (Binary Exponentiation)
+
+I/P: x = 2, n = 3
+O/P: 8  // 2 * 2 * 2
+
+I/P: x = 7, n = 2
+O/P: 49 // 7 * 7
+
+1. Efficient Solution: 
+// Some important concepts related to this approach:
+// 1. Every number can be written as the sum of powers of 2
+// 2. We can traverse through all the bits of a number from LSB to MSB in O(log n) time.
+
+int power(int x, int n) {
+    int result = 1;
+    while(n > 0) {
+        if (n % 2 != 0) {
+            result *= x;
+        }
+        n /= 2;
+        x *= x;
+    }
+    return result;
+}
+
+// Time Complexity: O(logn)
+// Auxiliary Space: O(1)
+
+2. Further Optimisation using bitwise operators:
+
+int power(int x, int n) {
+    int result = 1;
+    while(n > 0) {
+        if (n & 1) {
+            result *= x;
+        }
+        n = n >> 1;
+        x *= x;
+    }
+    return result;
+}
+
+// Time Complexity: O(logn)
+// Auxiliary Space: O(1)
 ```
