@@ -52,3 +52,15 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/764eaf1e-2b7a-43cc-9c60-481a2608bded" />
 
+# 4.5 : Bitwise Operators in Java (Part 3)
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0Mg%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/MjIxOA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/cfd87dee-d2be-457c-aa58-ee6b60ef984b" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/8113af45-fdd7-46f1-957a-012da5c37981" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/0494ca15-9936-46f6-9db9-703c02f39650" />
+
