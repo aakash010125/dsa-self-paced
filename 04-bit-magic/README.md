@@ -38,3 +38,17 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/d100d766-bea6-479c-899e-60843f42e28b" />
 
+# 4.4 : Bitwise Operators in Java (Part 2)
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0MQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/MjIxOA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/bdf4a11e-fe47-44d9-8f0e-27ab834dcfa3" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/6b4ab0c8-e92d-43e0-aa82-d5034c67b70e" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/08d9e185-e855-47ca-94e5-6edf63d61bf8" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/764eaf1e-2b7a-43cc-9c60-481a2608bded" />
+
