@@ -10,3 +10,19 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/04b1fe62-db53-412f-ade4-30c02b62ca89" />
 
+# 4.2 : Bitwise Operators in CPP (Part 2)
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0MA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/MjIxOA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/f3020a4c-9368-47c1-92fd-6b380fe50de1" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/e5d8f859-c355-499e-91a7-e0f79fa1f873" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/4d5af15c-fc66-4fbe-8024-084946a47f55" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/fea69763-de18-4702-9438-bd06a5e6bd53" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/43f80426-d003-4169-9559-ad8f22a78361" />
+
