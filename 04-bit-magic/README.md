@@ -64,3 +64,15 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/0494ca15-9936-46f6-9db9-703c02f39650" />
 
+# 4.6 : Binary Representation of Negative Numbers
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/MTQ3Njg%3D
+
+**Article Link 1 :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/MjIxOQ%3D%3D
+
+**Article Link 2 :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/MjIyMQ%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/07e826e3-6a3a-4329-9ff0-3aae8a1913ce" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/d497b73f-b962-4781-9fe3-bc333032c29a" />
+
