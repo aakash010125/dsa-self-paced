@@ -76,3 +76,71 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/d497b73f-b962-4781-9fe3-bc333032c29a" />
 
+# 4.7 : Check if Kth bit is set or not
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0Mw%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzMg%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/c56d30c0-bf91-416a-a0d1-a7384220f494" />
+
+```
+Problem Statement: 
+
+Given a number n, check if the Kth bit of n is set or not where k <= No. of bits in the binary representation of n.
+
+I/P: n = 5, k = 1
+O/P: Yes
+
+I/P: n = 8, k = 2
+O/P: No
+
+I/P: n = 0, k = 3
+O/P: No
+
+1. Naive Solution:
+
+void isSet(int n, int k) {
+    int x = 1;
+    for (int i=0; i<(k-1); i++) {
+        x *= 2;
+    }
+    if ((n & x) != 0) {
+        std::cout << "Yes" << std::endl;
+    } else {
+        std::cout << "No" << std::endl;
+    }
+}
+
+// Time Complexity: theta(k)
+// Auxiliary Space: O(1) or constant
+
+2. Efficient Solution 1: Using left shift operator
+
+void isKthBitSet(int n, int k) {
+    int temp = (1 << (k - 1));
+    if ((n & temp) != 0) {
+        std::cout << "Yes" << std::endl;
+    } else {
+        std::cout << "No" << std::endl;
+    }
+}
+
+// Time Complexity: O(1)
+// Auxiliary Space: O(1) or constant
+
+3. Efficient Solution 2: Using right shift operator
+
+void isKthBitSet(int n, int k) {
+    int temp = (n >> (k - 1)); // floor of (n/(2^(k-1)))
+    if ((1 & temp) != 0) {
+        std::cout << "Yes" << std::endl;
+    } else {
+        std::cout << "No" << std::endl;
+    }
+}
+
+// Time Complexity: O(1)
+// Auxiliary Space: O(1) or constant
+```
+
