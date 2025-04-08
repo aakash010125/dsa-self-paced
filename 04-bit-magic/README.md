@@ -353,7 +353,77 @@ int findOdd(int arr[], int n) {
     return result;
 }
 
-// Time Complexity: theta(1)
+// Time Complexity: O(n)
 // Auxiliary Space: O(1)
 ```
+
+# 4.11 : Two Odd Occurring
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/MTQ5MDU%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzNg%3D%3D
+
+```
+Problem Statement: 
+
+Given an unsorted array that contains even number of occurrences for all numbers except two numbers. 
+Find the two numbers which have odd occurrences in O(n) time complexity and O(1) extra space.
+
+I/P: {12, 23, 34, 12, 12, 23, 12, 45}
+O/P: 34 and 45
+
+I/P: {4, 4, 100, 5000, 4, 4, 4, 4, 100, 100}
+O/P: 100 and 5000
+
+I/P: {10, 20}
+O/P: 10 and 20
+
+1. Naive Solution:
+
+void findTwoOdd(int arr[], int n) {
+    for (int i=0; i<n; i++) {
+        int count = 0;
+        for (int j=0; j<n; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+            }
+        }
+        if (count % 2 != 0) {
+            std::cout << arr[i] << " ";
+        }
+    }
+}
+
+// Time Complexity: O(n^2)
+// Auxiliary Space: O(1)
+
+2. Efficient Solution: 
+
+void findTwoOdd(int arr[], int n) {
+    int x = arr[0];
+    for (int i=1; i<n; i++) {
+        x ^= arr[i];
+    }
+    
+    # Find the rightmost set bit in xors (which will be different in the two odd occurring numbers)
+    int k = x & (~(x-1));
+
+    int res1 = 0, res2 = 0;
+    for (int j=0; j<n; j++) {
+        if((arr[j] & k) != 0) {
+            res1 ^= arr[j];
+        } else {
+            res2 ^= arr[j];
+        }
+    }
+    std::cout << res1 << " " << res2;
+}
+
+// Time Complexity: O(n)
+// Auxiliary Space: O(1)
+```
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/600e0a0d-df10-4530-8295-990f159b55e6" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/46aae11d-7051-4f38-a5c8-9af91243bedc" />
 
