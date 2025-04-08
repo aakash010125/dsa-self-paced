@@ -272,7 +272,7 @@ bool isPowerOfTwo(int n) {
         }
         n /= 2;
     }
-     return true;
+    return true;
 }
 
 // Time Complexity: theta(d), where d = No. of bits from last to MSB
@@ -288,5 +288,72 @@ bool isPowerOfTwo(int n) {
 
 // Time Complexity: O(1)
 // Auxiliary Space: O(1) or constant
+```
+
+# 4.10 : One Odd Occurring
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0Ng%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzNQ%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/3155effe-b7b8-4e64-ae16-bdc22d071ee9" />
+
+```
+Problem Statement: 
+
+Given an array of positive integers. All numbers occur an even number of times except one 
+number which occurs an odd number of times. Find the number in O(n) time & constant space.
+
+I/P: arr[] = {1, 2, 3, 2, 3, 1, 3}
+O/P: 3
+
+I/P: arr[] = {5, 7, 2, 7, 5, 2, 5}
+O/P: 5
+
+1. Naive Solution:
+// A Simple Solution is to run two nested loops. The outer loop picks all elements one by one
+// and the inner loop counts the number of occurrences of the element picked by the outer loop.
+// The time complexity of this solution is O(n2).
+
+int findOdd(int arr[], int n) {
+    int result;
+    for(int i=0; i<n; i++) {
+        int count = 0;
+        for(int j=0; j<n; j++) {
+            if(arr[i] == arr[j]) {
+                count++;
+            }
+        }
+        if (count % 2 != 0) {
+            result = arr[i];
+            break;
+        }
+    }
+    return result;
+}
+
+// Time Complexity: O(n^2)
+// Auxiliary Space: O(1)
+
+2. Efficient Solution: 
+// The Best Solution is to do bitwise XOR of all the elements. XOR of all elements gives us odd occurring elements. 
+// Here ^ is the XOR operators;
+
+Note :
+x^0 = x
+x^y=y^x (Commutative property holds)
+(x^y)^z = x^(y^z) (Associative property holds)
+x^x=0
+
+int findOdd(int arr[], int n) {
+    int result = arr[0];
+    for(int i=1; i<n; i++) {
+        result ^= arr[i];
+    }
+    return result;
+}
+
+// Time Complexity: theta(1)
+// Auxiliary Space: O(1)
 ```
 
