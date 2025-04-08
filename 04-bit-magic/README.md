@@ -144,3 +144,98 @@ void isKthBitSet(int n, int k) {
 // Auxiliary Space: O(1) or constant
 ```
 
+# 4.8 : Count Set Bits
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0NA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzMw%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/9f2eebb6-ed82-4b5a-9a15-512a98d85d6f" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/681a36fc-1fd2-48e6-8cbb-3ca7aae8563a" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/b16c7cb2-bc7c-4596-8270-a8f579b87ba7" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/28cea078-fda1-49a2-9c40-c1964aeabcba" />
+
+```
+Problem Statement: 
+
+Write an efficient program to count the number of 1s in the binary representation of an integer.
+
+I/P: n = 5
+O/P: 2
+
+I/P: n = 7
+O/P: 3
+
+I/P: n = 13
+O/P: 3
+
+1. Naive Solution:
+
+int countSetBits(int n) {
+    int result = 0;
+    while (n > 0) {
+        if (n % 2 == 1) {
+            result++;
+        }
+        n /= 2;
+    }
+    return result;
+}
+
+int countSetBits(int n) {
+    int result = 0;
+    while (n > 0) {
+        result += (n & 1); // optimisation
+        n /= 2;
+    }
+    return result;
+}
+
+// Time Complexity: theta(d), where d = No. of bits from last to MSB
+// Auxiliary Space: O(1) or constant
+
+2. Efficient Solution: Brian Kernighan’s Algorithm:
+
+int countSetBits(int n) {
+    int result = 0;
+    while (n > 0) {
+        n = n & (n - 1);
+        result++;
+    }
+    return result;
+}
+
+// Time Complexity: theta(d), where d = No. of set bits in binary representation of n
+// Auxiliary Space: O(1) or constant
+
+3. Efficient Solution: Lookup Table Solution
+// The idea is to set count bits in O(1) time with some preprocessing involved.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// lookup table
+int tbl[256];
+
+int countSetBits(int n, int tbl[]) {
+    return tbl[n & 255] + tbl[(n >> 8) & 255] + tbl[(n >> 16) & 255] + tbl[(n >> 24)];
+}
+
+int main() {
+    // preprocessing
+    for (int i=1; i<256; i++) {
+        tbl[i] = tbl[i & (i-1)] + 1;
+    }
+    std::cout << countSetBits(5, tbl) << " ";
+    std::cout << countSetBits(7, tbl) << " ";
+    std::cout << countSetBits(13, tbl);
+    return 0;
+}
+
+// Time Complexity: O(1)
+// Auxiliary Space: O(1)
+```
+
