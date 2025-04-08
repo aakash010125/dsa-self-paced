@@ -239,3 +239,54 @@ int main() {
 // Auxiliary Space: O(1)
 ```
 
+# 4.9 : Power of Two
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0NQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzNA%3D%3D
+
+```
+Problem Statement: 
+
+Given a positive integer n, write a function to find if it is a power of 2 or not, n >= 0.
+
+I/P: n = 4
+O/P: True
+
+I/P: n = 6
+O/P: False
+
+I/P: n = 1
+O/P: True
+
+I/P: n = 0
+O/P: False
+
+1. Naive Solution:
+
+bool isPowerOfTwo(int n) {
+    if (n == 0) return false;
+    while (n != 1) {
+        if (n % 2 != 0) {
+            return false;
+        }
+        n /= 2;
+    }
+     return true;
+}
+
+// Time Complexity: theta(d), where d = No. of bits from last to MSB
+// Auxiliary Space: O(1) or constant
+
+2. Efficient Solution: Using Brian Kernighan’s Algorithm
+// Binary Representations of Powers of 2 have only one set bit.
+
+bool isPowerOfTwo(int n) {
+    if (n == 0) return 0;
+    return ((n & (n-1)) == 0);
+}
+
+// Time Complexity: O(1)
+// Auxiliary Space: O(1) or constant
+```
+
