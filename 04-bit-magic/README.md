@@ -427,3 +427,38 @@ void findTwoOdd(int arr[], int n) {
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/46aae11d-7051-4f38-a5c8-9af91243bedc" />
 
+# 4.12 : Power Set using Bitwise
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/video/Nzc0OA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzNw%3D%3D
+
+```
+Problem Statement: 
+
+Power set P(S) of a set S is the set of all subsets of S. 
+For example S = {a, b, c} then P(s) = {{}, {a}, {b}, {c}, {a,b}, {a, c}, {b, c}, {a, b, c}}.
+If S has n elements in it then P(s) will have 2n elements.
+
+1. Solution:
+
+void printPowerSet(std::string s) {
+    int n = s.length();
+    int pSize = (1<<n);
+    for (int i=0; i<pSize; i++) {
+        for (int j=0; j<n; j++) {
+            if ((i & (1<<j)) != 0) {
+                std::cout << s[j];
+            }
+        }
+        std::cout << "\n";
+    }
+}
+
+// Time Complexity: O(n * 2^n)
+// Auxiliary Space: O(1)
+```
+
+**Maximum AND Value | Explanation :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/MjYyMQ%3D%3D
+
+**Maximum AND value of a pair in an array :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-BitMagic/article/NzAzNw%3D%3D
