@@ -31,3 +31,13 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/7e704dfb-287f-441e-a12e-fb6838252546" />
 
+# 5.4 : Recursion Output Practice - Part 2
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYzNQ%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/4f1073c4-ad3a-4f4d-bc2f-ba03b0a42d78" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/d8c020a1-d7a1-43ca-89dc-3e78c77d44b4" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/28e72480-0c13-4d19-b84b-92b31d12de73" />
+
