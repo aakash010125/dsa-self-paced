@@ -41,3 +41,34 @@
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/28e72480-0c13-4d19-b84b-92b31d12de73" />
 
+# 5.5 : Print N to 1 Using Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYxOA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/Njg5Mg%3D%3D
+
+```
+Problem Statement: 
+
+Given a number N, the task is to print the numbers from N to 1.
+
+I/P: N = 10 
+O/P: 10 9 8 7 6 5 4 3 2 1
+
+I/P: N = 7 
+O/P: 7 6 5 4 3 2 1 
+
+1. Recursive Solution:
+
+void printNTo1(int N) {
+    if (N <= 0) {
+        return;
+    }
+    std::cout << N << " ";
+    printNTo1(N-1);
+}
+
+// Time Complexity: O(N)
+// Auxiliary Space: O(N)
+```
+
