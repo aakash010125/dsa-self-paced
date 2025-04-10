@@ -72,3 +72,34 @@ void printNTo1(int N) {
 // Auxiliary Space: O(N)
 ```
 
+# 5.6 : Print 1 to N Using Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYxOQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/Njg5Mw%3D%3D
+
+```
+Problem Statement: 
+
+Given a number N, the task is to print the numbers from 1 to N.
+
+I/P: N = 10 
+O/P: 1 2 3 4 5 6 7 8 9 10
+
+I/P: N = 7 
+O/P: 1 2 3 4 5 6 7
+
+1. Recursive Solution:
+
+void print1ToN(int N) {
+    if (N <= 0) {
+        return;
+    }
+    print1ToN(N-1);
+    std::cout << N << " ";
+}
+
+// Time Complexity: O(N)
+// Auxiliary Space: O(N)
+```
+
