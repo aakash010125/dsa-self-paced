@@ -23,3 +23,11 @@
 1. Many algorithmic techniques are based on recursion like Dynamic Programming (DP), Backtracking and Divide & Conquer (binary search, quick sort & merge sort).
 2. Many problems which are inherently recursive like Tower of Hanoi, DFS based traversals (DFS of graph and Other Inorder, preorder & postorder traversals in tree).
 
+# 5.3 : Recursion Output Practice - Part 1
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYyNQ%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/4f0c8239-7b7a-4abb-9e4a-e5164ded1a1a" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/7e704dfb-287f-441e-a12e-fb6838252546" />
+
