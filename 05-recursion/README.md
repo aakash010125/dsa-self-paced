@@ -113,3 +113,11 @@ void print1ToN(int N) {
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/8a1b8a44-f452-4bd8-8582-806c4ed93f78" />
 
+# 5.8 : Writing Base Cases in Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTM2OA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/98139258-4137-405b-96da-b1ee63ccdcc5" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/aac8113f-a4e8-4240-8cdf-13097d375424" />
+
