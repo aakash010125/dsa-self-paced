@@ -121,3 +121,34 @@ void print1ToN(int N) {
 
 <img width="900" alt="Image" src="https://github.com/user-attachments/assets/aac8113f-a4e8-4240-8cdf-13097d375424" />
 
+# 5.9 : Natural Number Sum using Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYyNg%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUwNw%3D%3D
+
+```
+Problem Statement: 
+
+Given a number n, find sum of first n natural numbers.
+
+I/P: 3
+O/P: 6
+Explanation : 1 + 2 + 3 = 6
+
+I/P: 5
+O/P: 15
+Explanation : 1 + 2 + 3 + 4 + 5 = 15
+
+1. Recursive Solution:
+
+int sumOfNaturalNumbers(int n) {
+    // base condition
+    if (n == 1) return 1;
+    return n + sumOfNaturalNumbers(n-1);
+}
+
+// Time Complexity: O(N)
+// Auxiliary Space: O(N)
+```
+
