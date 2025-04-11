@@ -262,3 +262,46 @@ int maxCuts(int n, int a, int b, int c) {
 // Auxiliary Space: O(n), due to recursive call stack.
 ```
 
+# 5.13 : Generate Subsets
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MjMzMQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUxMA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/a5bb4b5e-853d-41c8-b17a-97c6a8a224b6" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/f0ccfcb1-d90e-4d44-97c6-637537ad65cf" />
+
+```
+Problem Statement: 
+
+Given a set represented as a string, write a recursive code to print all the subsets of it. The subsets can be printed in any order.
+
+I/P: set = "abc"
+O/P: "", "a", "b", "c", "ab", "ac", "bc", "abc"
+
+I/P: set = "abcd"
+O/P: "", "a", "ab", "abc", "abcd", "abd", "ac", "acd", "ad", "b", "bc", "bcd", "bd", "c", "cd", "d"
+
+1. Recursive Solution:
+
+void powerSet(string str, int index = 0, string curr = "") {
+    int n = str.length();
+
+    // base condition
+    if (index == n) {
+        cout << curr << endl;
+        return;
+    }
+
+    // Two cases for every character
+    // (i) We consider the character as part of current subset
+    // (ii) We do not consider current character as part of current subset
+    powerSet(str, index + 1, curr + str[index]);
+    powerSet(str, index + 1, curr);
+}
+
+// Time Complexity: O(3^n)
+// Auxiliary Space: O(n), due to recursive call stack.
+```
+
