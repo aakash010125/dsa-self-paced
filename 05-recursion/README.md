@@ -103,3 +103,13 @@ void print1ToN(int N) {
 // Auxiliary Space: O(N)
 ```
 
+# 5.7 : Tail Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYyNA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUwNg%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/9b8542cb-38ce-4cde-bb2d-a144dad60dcb" />
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/8a1b8a44-f452-4bd8-8582-806c4ed93f78" />
+
