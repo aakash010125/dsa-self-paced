@@ -194,3 +194,32 @@ int main() {
 // Auxiliary Space: O(N)
 ```
 
+# 5.11 : Sum of Digits Using Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MjMyOQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUwOQ%3D%3D
+
+```
+Problem Statement: 
+
+Given a number, we need to find sum of its digits using recursion. (n>=0)
+
+I/P: 12345
+O/P: 15
+
+I/P: 45632
+O/P: 20
+
+1. Recursive Solution:
+
+int sumOfDigits(int n) {
+    // base condition
+    if (n <= 9) return n;
+    return sumOfDigits(n / 10) + (n % 10);
+}
+
+// Time Complexity: O(d), where d = no. of digits in n
+// Auxiliary Space: O(d), where d = no. of digits in n
+```
+
