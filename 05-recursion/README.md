@@ -223,3 +223,42 @@ int sumOfDigits(int n) {
 // Auxiliary Space: O(d), where d = no. of digits in n
 ```
 
+# 5.12 : Rope Cutting Problem
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MjMzMw%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/ODUyMA%3D%3D
+
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/f2c56b1d-9f92-4784-8973-e67168072e0b" />
+
+```
+Problem Statement: 
+
+Given a rope of length N meters, and the rope can be cut in only 3 sizes A, B and C. 
+The task is to maximizes the number of cuts in rope. If it is impossible to make cut then print the number else print -1.
+
+I/P: N = 17, A = 10, B = 11, C = 3
+O/P: 3
+Explanation: The maximum cut can be obtain after making 2 cut of length 3 and one cut of length 11.
+
+I/P: N = 10, A = 9, B = 7, C = 11
+O/P: -1
+Explanation: It is impossible to make any cut so output will be -1.
+
+1. Recursive Solution:
+
+int maxCuts(int n, int a, int b, int c) {
+	if(n == 0) return 0;
+	if(n <= -1) return -1;
+
+	int res = max(maxCuts(n-a, a, b, c), max(maxCuts(n-b, a, b, c), maxCuts(n-c, a, b, c)));
+
+	if(res == -1) return -1;
+	return res + 1; 
+}
+
+
+// Time Complexity: O(3^n)
+// Auxiliary Space: O(n), due to recursive call stack.
+```
+
