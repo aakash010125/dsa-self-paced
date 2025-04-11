@@ -152,3 +152,45 @@ int sumOfNaturalNumbers(int n) {
 // Auxiliary Space: O(N)
 ```
 
+# 5.10 : Palindrome Check using Recursion
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTYyOQ%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUwOA%3D%3D
+
+```
+Problem Statement: 
+
+Given a string, write a recursive function that checks if the given string is a palindrome or not.
+
+I/P: malayalam
+O/P: Yes
+Reverse of malayalam is also malayalam.
+
+I/P: max
+O/P: No
+Reverse of max is not max. 
+
+1. Recursive Solution:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isPalindrome(string s, int start, int end) {
+    // base condition
+    if (start >= end) {
+        return true;
+    }
+    return (s[start] == s[end]) && isPalindrome (s, start+1, end-1);
+}
+
+int main() {
+    std::cout << isPalindrome("abba", 0, 3) << std::endl;
+    std::cout << isPalindrome("geeks", 0, 4);
+    return 0;
+}
+
+// Time Complexity: O(N)
+// Auxiliary Space: O(N)
+```
+
