@@ -305,3 +305,38 @@ void powerSet(string str, int index = 0, string curr = "") {
 // Auxiliary Space: O(n), due to recursive call stack.
 ```
 
+# 5.14 : Tower of Hanoi
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/OTYw
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUxMQ%3D%3D
+
+```
+Problem Statement: 
+
+Tower of Hanoi is a mathematical puzzle where we have three rods (A, B, and C) and N disks. Initially, all the disks are 
+stacked in decreasing value of diameter i.e., the smallest disk is placed on the top and they are on rod A. 
+The objective of the puzzle is to move the entire stack to another rod (here considered C), obeying the following simple rules: 
+
+A. Only one disk can be moved at a time.
+B. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. 
+   a disk can only be moved if it is the uppermost disk on a stack.
+C. No disk may be placed on top of a smaller disk
+
+1. Recursive Solution:
+
+void towerOfHanoi(int n, char A, char B, char C) {
+    // base condition
+    if (n == 1) {
+        std::cout << "Move 1 from tower " << A << " to " << C << std::endl;
+        return;
+    }
+    towerOfHanoi(n-1, A, C, B);
+    std::cout << "Move " << n << " from tower " << A << " to " << C << std::endl;
+    towerOfHanoi(n-1, B, A, C);
+}
+
+// Time Complexity: O(2^N), There are two possibilities for every disk. Therefore, 2 * 2 * 2 * . . . * 2(N times) is 2^N
+// Auxiliary Space: O(N), Function call stack space
+```
+
