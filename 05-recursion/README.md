@@ -362,4 +362,23 @@ int josephus(int n, int k){
 // Time Complexity: O(n)
 // Space Complexity: O(n) the space used in recursion call stack
 ```
+# 5.16 : Subset Sum Problem (Recursive Solution) (Medium)
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MTQ2OQ%3D%3D
+
+```
+Problem Statement: Given an array with n elements. Task is to return the count of subsets whose sum total value is equal to sum. 
+
+1. Recursive Solution:
+
+int countSubsets(int arr[], int n, int sum) {
+    // base condition
+    if (n == 0) {
+        return (sum == 0) ? 1 : 0;
+    }
+    return countSubsets(arr, n-1, sum) + countSubsets(arr, n-1, sum - arr[n-1]);
+}
+
+// Time Complexity: O(2^n)
+```
 
