@@ -311,6 +311,8 @@ void powerSet(string str, int index = 0, string curr = "") {
 
 **Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUxMQ%3D%3D
 
+<img width="900" alt="Image" src="https://github.com/user-attachments/assets/351b67b5-d7a5-48c1-b024-0e1e21e54f23" />
+
 ```
 Problem Statement: 
 
@@ -338,5 +340,26 @@ void towerOfHanoi(int n, char A, char B, char C) {
 
 // Time Complexity: O(2^N), There are two possibilities for every disk. Therefore, 2 * 2 * 2 * . . . * 2(N times) is 2^N
 // Auxiliary Space: O(N), Function call stack space
+```
+
+# 5.15 : Josephus Problem
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/OTYx
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUxMg%3D%3D
+
+```
+Problem Statement: Open Article Link
+
+1. Recursive Solution:
+
+int josephus(int n, int k){
+    // base condition
+    if (n == 1) return 0;
+    return (josephus(n-1, k) + k) % n;
+}
+
+// Time Complexity: O(n)
+// Space Complexity: O(n) the space used in recursion call stack
 ```
 
