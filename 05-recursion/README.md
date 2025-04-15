@@ -382,3 +382,45 @@ int countSubsets(int arr[], int n, int sum) {
 // Time Complexity: O(2^n)
 ```
 
+# 5.17 : Printing all Permutations
+
+**Lecture Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/video/MjMzNA%3D%3D
+
+**Article Link :** https://www.geeksforgeeks.org/batch/dsa-4/track/DSASP-Recursion/article/NzUxMw%3D%3D
+
+```
+Problem Statement: Given a string, print all permutations of it.
+
+I/P: str = "ABC"
+O/P: ABC ACB BAC BCA CAB CBA
+
+1. Recursive Solution:
+
+// permutations with duplicates allowed 
+#include <bits/stdc++.h>
+using namespace std;
+
+void permute(string &str, int l, int r) {
+    if (l == r) {
+        cout << str << " ";
+        return ;
+    }
+    else {
+        for (int i = l; i <= r; i++) {
+            swap(str[l], str[i]);
+            permute(str, l+1, r);
+            swap(str[l], str[i]);
+        }
+    }
+}
+
+int main() { 
+    string str = "ABC";
+    permute(str, 0, str.length()-1); 
+    return 0; 
+}
+
+// Time Complexity: O(N * N!), where N is the length of the string. Note that there are N! permutations and it requires O(N) time to print a permutation.
+// Auxiliary Space: O(N), , where N is the length of the string.
+```
+
